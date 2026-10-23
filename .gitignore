@@ -1,0 +1,24 @@
+# Système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Éditeurs
+.vscode/
+.idea/
+
+# Dépendances
+node_modules/
+vendor/
+
+# Logs et temporaires
+*.log
+*.tmp
+
+# Config locale et secrets
+.env
+wp-config.php
+
+# Bases de données et archives
+*.sql
+*.zip
