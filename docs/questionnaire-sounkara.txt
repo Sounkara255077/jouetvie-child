@@ -1,0 +1,73 @@
+==================================================
+  QUIZ ECODEVCHALLENGER · RÉPONSES
+==================================================
+Étudiant·e : Sounkara Camara
+Date       : 23/10/2026 22:45:22
+
+--------------------------------------------------
+[1/13] Quel est ton nom ?
+
+  Sounkara Camara
+
+--------------------------------------------------
+[2/13] Pourquoi as-tu choisi cette formation ?
+
+  Je suis en reconversion professionnelle. Après avoir travaillé comme assistante administrative dans un CPAS, j’ai suivi une formation d’animatrice multimédia que j’ai beaucoup appréciée, surtout pour le côté communication et créativité. Cette expérience m’a donné envie de poursuivre dans ce domaine. Aujourd’hui, j’aimerais travailler dans la communication digitale (chargée de communication, brand content manager) ou la gestion de projet.
+
+--------------------------------------------------
+[3/13] Face à un blocage, tu…
+
+  Cherches seul·e une solution
+
+--------------------------------------------------
+[4/13] Le type de retour qui t'aide le plus
+
+  Détaillé par écrit
+
+--------------------------------------------------
+[5/13] Nom définitif du projet
+
+  Jouet&Vie
+
+--------------------------------------------------
+[6/13] Ton projet en une phrase
+
+  Jouet&Vie permet aux familles de Schaerbeek de donner et d’échanger gratuitement les jouets qu’elles n’utilisent plus, pour leur offrir une seconde vie.
+
+--------------------------------------------------
+[7/13] Qu'est-ce qui rend ton projet différent de ce qui existe déjà ?
+
+  Contrairement à Vinted, 2ememain ou aux groupes Facebook, où l’on vend, où les annonces se perdent et où il faut négocier, Jouet&Vie est 100 % local, gratuit et rapide. On donne uniquement entre familles de Schaerbeek, sans vente ni envoi postal. Publier une annonce prend quelques clics (photo, catégorie, âge), et la personne qui donne propose 2 ou 3 créneaux de retrait : pas d’échanges interminables. Les jouets circulent dans le quartier au lieu d’être jetés.
+
+--------------------------------------------------
+[8/13] Ta confiance dans l'aboutissement du projet
+
+  4 / 5
+
+--------------------------------------------------
+[9/13] Ton niveau d'enthousiasme actuel pour le projet
+
+  4 / 5
+
+--------------------------------------------------
+[10/13] Ton plus gros défi actuel
+
+  Mon plus gros défi, c’est la partie technique : réussir à transformer ce qu’on a imaginé dans les maquettes en un site qui fonctionne vraiment sur WordPress. Le design ne m’inquiète moins, c’est plutôt le côté fonctionnel : faire en sorte que la réservation d’un jouet, le panier et le choix des créneaux de retrait marchent réellement.
+
+--------------------------------------------------
+[11/13] Besoin d'un aménagement particulier, ou une chose en particulier à savoir sur toi ?
+
+  Non, rien de particulier.
+
+--------------------------------------------------
+[12/13] Pour toi, ce projet sera réussi si…
+
+  Pour moi, ce projet sera réussi si le jury comprend clairement qui nous sommes, ce que nous proposons et pourquoi : rendre le don de jouets aussi simple que de les jeter. Il faudra aussi que toutes les fonctionnalités fonctionnent correctement, de la publication d’une annonce à la réservation d’un créneau. Enfin, un projet réussi, c’est un site que n’importe quel parent peut utiliser seul, sans explication, et un travail mené ensemble jusqu’au bout, dans les délais.
+
+--------------------------------------------------
+[13/13] Si le développement de ton projet était un film, quel serait son titre ?
+
+  Le Voyage extraordinaire des jouets oubliés (film d’animation)
+
+==================================================
+Fin du fichier
