@@ -84,6 +84,7 @@ Messages courts, en français, au présent, précédés du type :
 
 ## 📋 Répartition des tâches
 
+
 | Tâche | Responsable |
 |---|---|
 | Mise en place du dépôt et du README | Sounkara |
