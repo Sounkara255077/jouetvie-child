@@ -87,13 +87,13 @@ Messages courts, en français, au présent, précédés du type :
 | Tâche | Responsable |
 |---|---|
 | Mise en place du dépôt et du README | Sounkara |
-| Installation du thème enfant dans Local WP | Samuella |
-| Palette et typographies (`theme.json`) | Samuella |
-| Contenus et textes des pages | Sounkara |
-| Page d'accueil | Samuella |
-| Pages Chercher / Panier / Confirmation | À répartir |
-| Formulaire « Je donne » | À répartir |
-| Images et visuels | Sounkara |
+| Installation du thème enfant dans Local WP | Sounkara & Samuella |
+| Palette et typographies (`theme.json`) | Sounkara & Samuella |
+| Contenus et textes des pages | Sounkara & Samuella |
+| Page d'accueil | Sounkara & Samuella |
+| Pages Chercher / Panier / Confirmation | Sounkara & Samuella |
+| Formulaire « Je donne » | Sounkara & Samuella |
+| Images et visuels | Sounkara & Samuella |
 
 *Le détail et l'avancement sont suivis dans les issues et le tableau GitHub Projects.*
 
