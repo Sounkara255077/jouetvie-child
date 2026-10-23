@@ -90,9 +90,9 @@ Messages courts, en français, au présent, précédés du type :
 | Installation du thème enfant dans Local WP | Sounkara & Samuella |
 | Palette et typographies (`theme.json`) | Sounkara & Samuella |
 | Contenus et textes des pages | Sounkara & Samuella |
-| Page d'accueil | Sounkara & Samuella |
-| Pages Chercher / Panier / Confirmation | Sounkara & Samuella |
-| Formulaire « Je donne » | Sounkara & Samuella |
+| Page d'accueil | À répartir |
+| Pages Chercher / Panier / Confirmation | À répartir |
+| Formulaire « Je donne » | À répartir |
 | Images et visuels | Sounkara & Samuella |
 
 *Le détail et l'avancement sont suivis dans les issues et le tableau GitHub Projects.*
