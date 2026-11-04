@@ -1,13 +1,16 @@
 # Fiche technique — Jouet&Vie
 
 > **Projet Digital 2 (12E01) — Éco-challenge**
-> Binôme : Sounkara Camara & Samuella Munyandamutsa — EMU2, ISFSC
+>
+> Binôme : Sounkara Camara & Samuella Munyandamutsa EMU2, ISFSC
+>
 > Slogan : *« Donner devient aussi simple que jeter »*
-> Version : 0.1 (novembre 2026) — document vivant, mis à jour avec les wireframes, maquettes et le design system.
+>
+> Version : 0.1 (novembre 2026) cette fiche sera mise à jour au fil du projet, (les wireframes, maquettes et le design system).
 
 ---
 
-## 0. Le projet en une phrase
+## Le projet en une phrase
 
 Jouet&Vie est une plateforme de **dons et d'échange de jouets entre familles de Schaerbeek** : une personne publie un jouet dont elle n'a plus besoin, une autre le réserve et choisit un créneau de retrait. Objectif éco-challenge : **prolonger la vie des jouets et éviter qu'ils finissent à la poubelle.**
 
@@ -25,7 +28,7 @@ Jouet&Vie est une plateforme de **dons et d'échange de jouets entre familles de
 |---|---|---|
 | **Accueil** | Texte de présentation, visuel/vidéo hero, boutons « Je cherche » / « Je donne », compteur d'impact | Comprendre le concept en quelques secondes et choisir son parcours |
 | **Chercher** | Barre de recherche, filtres (catégorie, tranche d'âge), liste de cartes jouets | Trouver rapidement un jouet adapté à l'âge de son enfant |
-| **Chercher — variante « Aucun résultat »** | Message clair + suggestion de modifier les filtres | Ne pas rester bloquée face à une page vide |
+| **Chercher - variante « Aucun résultat »** | Message clair + suggestion de modifier les filtres | Ne pas rester bloquée face à une page vide |
 | **Fiche jouet** *(à valider dans les wireframes)* | Photo, description, catégorie, âge, état, créneaux de retrait proposés | Avoir toutes les infos avant de réserver |
 | **Panier** | Jouets réservés, rendez-vous de retrait (date, heure, adresse), bouton « Confirmer » | Vérifier sa sélection et son rendez-vous avant de s'engager |
 | **Confirmation** | Récapitulatif + message de remerciement | Être rassurée que la réservation est bien prise en compte |
@@ -42,15 +45,15 @@ Jouet&Vie est une plateforme de **dons et d'échange de jouets entre familles de
 
 ## 2. Sections et composants
 
-**COMMENT :** éditeur **Gutenberg** (blocs et compositions/patterns) + **thème enfant** (`jouetvie-child`) d'un thème parent basé sur les blocs *(thème parent à confirmer, ex. Twenty Twenty-Five)*.
-**POURQUOI :** adaptation aux supports — **mobile d'abord**, puis tablette et ordinateur.
+**COMMENT :** éditeur **Gutenberg** (blocs et compositions/patterns) + **thème enfant** (`jouetvie-child`) d'un thème parent basé sur les blocs.
+**POURQUOI :** adaptation aux supports **mobile d'abord**, puis tablette et ordinateur.
 
 | Composant | Où ? | Réalisation | Adaptation aux supports |
 |---|---|---|---|
-| **En-tête** : ☰ menu · logo · 👤 connexion · 🧺 panier avec compteur | Toutes les pages | Template part `header.html` du thème enfant | Mobile : icônes seules. Ordinateur : menu déployé en texte |
+| **En-tête** : icône menu, logo, icône connexion, icône panier avec compteur | Toutes les pages | Template part `header.html` du thème enfant | Mobile : icônes seules. Ordinateur : menu déployé en texte |
 | **Barre du bas** : Calendrier · Favoris · Publier · Messages · Profil | Toutes les pages (mobile) | Template part `footer` + CSS | Visible sur mobile/tablette, remplacée par le menu principal sur ordinateur |
 | **Hero** (texte + vidéo/image + 2 boutons) | Accueil | Bloc Couverture + Boutons, enregistré en pattern | Vidéo remplacée par une image sur mobile si trop lourde |
-| **Carte jouet** (photo, titre, âge, catégorie, ♡ favori) | Chercher, Favoris, Profil | Pattern réutilisable / bloc Query Loop | 1 colonne mobile, 2 tablette, 3–4 ordinateur |
+| **Carte jouet** (photo, titre, âge, catégorie, bouton favori) | Chercher, Favoris, Profil | Pattern réutilisable / bloc Query Loop | 1 colonne mobile, 2 tablette, 3–4 ordinateur |
 | **Barre de recherche + filtres** | Chercher | Bloc Recherche + filtres en JavaScript | Filtres repliables sur mobile |
 | **Formulaire d'annonce** | Publier | Formulaire *(extension à choisir : WP User Frontend ou formulaire maison)* | Champs empilés en pleine largeur sur mobile |
 | **Récapitulatif rendez-vous** | Panier, Confirmation | Groupe de blocs + pattern | Empilé sur mobile, en colonnes sur ordinateur |
@@ -99,11 +102,11 @@ Jouet&Vie est une plateforme de **dons et d'échange de jouets entre familles de
 
 | État | Déclencheur | Réaction de l'interface | Information transmise |
 |---|---|---|---|
-| Menu ouvert / fermé | Clic sur ☰ | Le menu s'ouvre/se ferme, `aria-expanded` mis à jour | « Voici les sections du site » |
+| Menu ouvert / fermé | Clic sur l'icône menu | Le menu s'ouvre/se ferme, `aria-expanded` mis à jour | « Voici les sections du site » |
 | Filtre actif | Clic sur une catégorie / tranche d'âge | Le filtre change de couleur, la liste se met à jour | « Tu vois uniquement les jouets 3–5 ans » |
 | Aucun résultat | Recherche sans correspondance | Affichage de la variante « Aucun résultat » | « Essaie d'autres filtres » |
-| Favori ajouté / retiré | Clic sur ♡ | Cœur plein/vide + petit message | « Ajouté à tes favoris » |
-| Compteur du panier | Ajout d'un jouet | Le chiffre sur 🧺 augmente | « Tu as 2 jouets dans ton panier » |
+| Favori ajouté / retiré | Clic sur l'icône cœur | Cœur plein/vide + petit message | « Ajouté à tes favoris » |
+| Compteur du panier | Ajout d'un jouet | Le chiffre sur l'icône panier augmente | « Tu as 2 jouets dans ton panier » |
 | Créneau sélectionné | Choix d'un créneau de retrait | Créneau surligné, bouton Confirmer activé | « Rendez-vous choisi : mardi 18 h » |
 | Formulaire incomplet | Envoi avec champ manquant | Champ bordé de rouge + message | « Ajoute une photo du jouet » |
 | Confirmation | Clic sur Confirmer | Redirection vers la page Confirmation | « Ta réservation est enregistrée » |
