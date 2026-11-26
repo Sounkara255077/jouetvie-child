@@ -1,0 +1,71 @@
+/* ==========================================================
+   Composant : eco-card (carte jouet)
+   Toutes les valeurs viennent de theme.json (aucune valeur en dur)
+   ========================================================== */
+
+.eco-card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: var(--wp--preset--spacing--xs);
+	background-color: var(--wp--preset--color--fond);
+	color: var(--wp--preset--color--texte);
+	padding: var(--wp--preset--spacing--m);
+	border: var(--wp--custom--bordure) solid var(--wp--preset--color--texte);
+	border-radius: var(--wp--custom--radius);
+	transition: transform var(--wp--custom--transition),
+		box-shadow var(--wp--custom--transition);
+}
+
+/* Image de la carte */
+.eco-card img {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+	border-radius: var(--wp--custom--radius);
+}
+
+/* Titre de la carte */
+.eco-card :is(h2, h3) {
+	margin: 0;
+	font-family: var(--wp--preset--font-family--titres);
+	font-size: var(--wp--preset--font-size--grande);
+}
+
+/* Petit texte (catégorie, tranche d'âge) */
+.eco-card .eco-card__meta {
+	font-size: var(--wp--preset--font-size--petite);
+}
+
+/* Survol */
+.eco-card:hover {
+	transform: translateY(calc(var(--wp--preset--spacing--xs) * -1));
+	box-shadow: var(--wp--preset--spacing--xs) var(--wp--preset--spacing--xs) 0
+		var(--wp--preset--color--principale);
+}
+
+/* Focus clavier : sur le lien ou le bouton à l'intérieur de la carte */
+.eco-card a:focus-visible,
+.eco-card .wp-element-button:focus-visible {
+	outline: var(--wp--custom--bordure) solid var(--wp--preset--color--principale);
+	outline-offset: var(--wp--preset--spacing--xs);
+}
+
+/* La carte entière se met en avant quand un de ses éléments a le focus */
+.eco-card:has(:focus-visible) {
+	transform: translateY(calc(var(--wp--preset--spacing--xs) * -1));
+	box-shadow: var(--wp--preset--spacing--xs) var(--wp--preset--spacing--xs) 0
+		var(--wp--preset--color--principale);
+}
+
+/* Respect des préférences d'animation réduite */
+@media (prefers-reduced-motion: reduce) {
+	.eco-card {
+		transition: none;
+	}
+	.eco-card:hover,
+	.eco-card:has(:focus-visible) {
+		transform: none;
+	}
+}
