@@ -219,3 +219,11 @@ Répond aux questions fréquentes (« Comment réserver ? », « Que faire si je
 | Version | Date | Changements |
 |---|---|---|
 | 0.1 | nov. 2026 | Première version de la fiche technique |
+
+## Choix de personnalisation (design system et pages clés)
+
+1. Les couleurs (6, nommées par rôle), les 2 polices, les 4 tailles et les 4 espacements sont déclarés dans theme.json : une seule source de vérité, modifiable sans toucher au code des pages.
+2. Le composant eco-card est écrit dans assets/css/components/card.css et n'utilise que les variables générées par theme.json : changer une couleur du socle met toutes les cartes à jour.
+3. Les pages Accueil et Chercher sont montées dans Gutenberg ; l'en-tête et le pied de page sont des parties de modèle, et la grille de cartes est une composition réutilisable, enregistrées dans le thème avec Create Block Theme.
+4. Nous avons choisi les blocs natifs plutôt que Bootstrap : moins de code chargé, aucun conflit avec les styles de WordPress, et une mise en page éditable directement dans l'éditeur.
+5. Facilité pour le client : il modifie textes, images et cartes dans Gutenberg (niveau 1) et peut ajuster couleurs et typographie dans Styles (niveau 2), tandis que theme.json (niveau 3) et le CSS (niveau 4) restent réservés aux développeuses.
