@@ -1,0 +1,44 @@
+/* Composant : eco-hero (bandeau de recherche) — valeurs issues de theme.json */
+
+.eco-hero .wp-block-search__inside-wrapper {
+	background: transparent;
+	border: 0;
+	border-bottom: var(--wp--custom--bordure) solid var(--wp--preset--color--fond);
+	border-radius: 0;
+	padding: 0 0 var(--wp--preset--spacing--xs);
+	align-items: center;
+}
+
+.eco-hero .wp-block-search__input {
+	background: transparent;
+	border: 0;
+	padding: 0;
+	color: var(--wp--preset--color--fond);
+	font-family: var(--wp--preset--font-family--texte);
+	font-size: var(--wp--preset--font-size--tres-grande);
+}
+
+.eco-hero .wp-block-search__input::placeholder {
+	color: var(--wp--preset--color--fond);
+}
+
+.eco-hero .wp-block-search__input:focus-visible {
+	outline: var(--wp--custom--bordure) solid var(--wp--preset--color--principale);
+	outline-offset: var(--wp--preset--spacing--xs);
+}
+
+.eco-hero .wp-block-search__button {
+	font-size: var(--wp--preset--font-size--petite);
+	padding: var(--wp--preset--spacing--xs) var(--wp--preset--spacing--s);
+}
+
+.eco-hero a {
+	color: var(--wp--preset--color--fond);
+	text-decoration: none;
+}
+
+.eco-hero a:hover,
+.eco-hero a:focus-visible {
+	color: var(--wp--preset--color--secondaire);
+	text-decoration: underline;
+}

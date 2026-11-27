@@ -1,71 +1,85 @@
 /* ==========================================================
-   Composant : eco-card (carte jouet)
+   Composant : eco-card (carte catégorie / jouet)
+   Fonctionne avec la classe eco-card OU le style « Carte éco »
    Toutes les valeurs viennent de theme.json (aucune valeur en dur)
    ========================================================== */
 
-.eco-card {
-	position: relative;
+:is(.eco-card, .is-style-eco-card) {
 	display: flex;
 	flex-direction: column;
 	gap: var(--wp--preset--spacing--xs);
-	background-color: var(--wp--preset--color--fond);
 	color: var(--wp--preset--color--texte);
-	padding: var(--wp--preset--spacing--m);
-	border: var(--wp--custom--bordure) solid var(--wp--preset--color--texte);
-	border-radius: var(--wp--custom--radius);
-	transition: transform var(--wp--custom--transition),
-		box-shadow var(--wp--custom--transition);
+	transition: transform var(--wp--custom--transition);
 }
 
-/* Image de la carte */
-.eco-card img {
+/* Photo arrondie */
+:is(.eco-card, .is-style-eco-card) img {
+	display: block;
 	width: 100%;
 	height: auto;
 	aspect-ratio: 4 / 3;
 	object-fit: cover;
 	border-radius: var(--wp--custom--radius);
+	transition: box-shadow var(--wp--custom--transition);
 }
 
-/* Titre de la carte */
-.eco-card :is(h2, h3) {
+/* Titre en majuscules */
+:is(.eco-card, .is-style-eco-card) :is(h2, h3) {
 	margin: 0;
 	font-family: var(--wp--preset--font-family--titres);
-	font-size: var(--wp--preset--font-size--grande);
+	font-size: var(--wp--preset--font-size--petite);
+	text-transform: uppercase;
 }
 
-/* Petit texte (catégorie, tranche d'âge) */
-.eco-card .eco-card__meta {
+:is(.eco-card, .is-style-eco-card) :is(h2, h3) a {
+	color: inherit;
+	text-decoration: none;
+}
+
+/* Sous-titre */
+:is(.eco-card, .is-style-eco-card) .eco-card__meta {
+	margin: 0;
 	font-size: var(--wp--preset--font-size--petite);
 }
 
-/* Survol */
-.eco-card:hover {
+/* Survol : la carte monte, la photo prend une ombre orange */
+:is(.eco-card, .is-style-eco-card):hover {
 	transform: translateY(calc(var(--wp--preset--spacing--xs) * -1));
+}
+
+:is(.eco-card, .is-style-eco-card):hover img {
 	box-shadow: var(--wp--preset--spacing--xs) var(--wp--preset--spacing--xs) 0
 		var(--wp--preset--color--principale);
 }
 
-/* Focus clavier : sur le lien ou le bouton à l'intérieur de la carte */
-.eco-card a:focus-visible,
-.eco-card .wp-element-button:focus-visible {
+:is(.eco-card, .is-style-eco-card):hover :is(h2, h3) a {
+	text-decoration: underline;
+}
+
+/* Focus clavier visible */
+:is(.eco-card, .is-style-eco-card) a:focus-visible,
+:is(.eco-card, .is-style-eco-card) .wp-element-button:focus-visible {
 	outline: var(--wp--custom--bordure) solid var(--wp--preset--color--principale);
 	outline-offset: var(--wp--preset--spacing--xs);
 }
 
-/* La carte entière se met en avant quand un de ses éléments a le focus */
-.eco-card:has(:focus-visible) {
+:is(.eco-card, .is-style-eco-card):has(:focus-visible) {
 	transform: translateY(calc(var(--wp--preset--spacing--xs) * -1));
+}
+
+:is(.eco-card, .is-style-eco-card):has(:focus-visible) img {
 	box-shadow: var(--wp--preset--spacing--xs) var(--wp--preset--spacing--xs) 0
 		var(--wp--preset--color--principale);
 }
 
 /* Respect des préférences d'animation réduite */
 @media (prefers-reduced-motion: reduce) {
-	.eco-card {
+	:is(.eco-card, .is-style-eco-card),
+	:is(.eco-card, .is-style-eco-card) img {
 		transition: none;
 	}
-	.eco-card:hover,
-	.eco-card:has(:focus-visible) {
+	:is(.eco-card, .is-style-eco-card):hover,
+	:is(.eco-card, .is-style-eco-card):has(:focus-visible) {
 		transform: none;
 	}
 }
